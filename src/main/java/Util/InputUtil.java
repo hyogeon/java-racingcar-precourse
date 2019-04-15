@@ -10,18 +10,17 @@ public class InputUtil {
                         CheckUtil.checkNameLength(carsName);
                         return carsName;
                 } catch (Exception e) {
-                        System.err.println(e.getMessage());
                         return inputCarsName();
                 }
         }
-        public static int inputTrialNumber(){
-                try{
+
+        public static int inputTrialNumber() {
+                try {
                         int input = (new Scanner(System.in)).nextInt();
                         CheckUtil.checkMinusTrialNumber(input);
                         CheckUtil.checkMaxTrialNumber(input);
                         return input;
-                }catch(Exception e) {
-                        System.err.println(e.getMessage());
+                } catch (Exception e) {
                         return inputTrialNumber();
                 }
         }
