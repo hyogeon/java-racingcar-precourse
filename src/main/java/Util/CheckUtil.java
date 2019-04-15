@@ -23,4 +23,18 @@ public class CheckUtil {
                 }
                 return;
         }
+
+        public static void checkMinusTrialNumber(int input) throws  Exception{
+                if(input < 0){
+                        throw new Exception("시도 횟수 음수 오류");
+                }
+                return;
+        }
+
+        public static void checkMaxTrialNumber(int input) throws Exception{
+                if(input > RacingCarConstant.maxTrialNumber){
+                        throw new Exception("시도 횟수 최대값 초과 오류");
+                }
+                return;
+        }
 }
