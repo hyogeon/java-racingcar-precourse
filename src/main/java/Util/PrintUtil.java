@@ -1,8 +1,6 @@
 package Util;
 
-import object.Car;
-
-import java.util.Set;
+import java.util.List;
 
 public class PrintUtil {
         public static void printInputCarsNameMessage() {
@@ -14,15 +12,19 @@ public class PrintUtil {
         }
 
         public static void printResultMessage() {
-                System.out.println("실행 결과");
+                System.out.println("\n실행 결과");
         }
 
         public static void printCarAndPosition(String name, int position) {
                 System.out.print(name + " : ");
-                for(int i=0;i<position;i++){
+                for (int i = RacingCarConstant.zero; i < position; i++) {
                         System.out.print("-");
                 }
                 System.out.println();
         }
 
+        public static void printWinnerMessage(List<String> carsName) {
+                String resultMessage = String.join(", ", carsName);
+                System.out.println(resultMessage + "가 최종 우승했습니다.");
+        }
 }
